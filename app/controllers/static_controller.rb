@@ -5,13 +5,14 @@ class StaticController < ApplicationController
   def home_post
   	gossip = Gossip.new
   	gossip.author = params["author"]
-
+  	gossip.content = params["content"]
   	gossip.save
-  	puts "c'est fini"
+  	redirect_to "/index"
   end
 
   def index
   	@gossip = Gossip.last.author
+  	@gossip_all = Gossip.all
   	
 
   end
