@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LeProjetGossip</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+      <nav class="navbar navbar-light bg-light">
+          <a class="navbar" href="#">Team</a>
+          <a class="navbar" href="#">Contact</a>
+      </nav>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

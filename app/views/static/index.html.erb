@@ -1,0 +1,20 @@
+<head>
+
+
+</head>
+<h1>Bonjour <%= @gossip %></h1>
+
+
+<form action="index" method="post">
+	<input type="hidden" name="authenticity_token"
+	value="<%= form_authenticity_token %>">
+	Donne-moi ton potin :
+	<input type="text" name="content"><br><br>
+	<input type="submit" name="Envoyer">
+	<a href="index"></a>
+</form>
+
+<p>Voici la liste des potins</p><br><br>
+
+<a><%= @gossip[2].author %></a>
+<a>gossip(1).content</a>
